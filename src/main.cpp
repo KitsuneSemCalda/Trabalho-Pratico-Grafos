@@ -1,9 +1,7 @@
-#include <iostream>
-
-using namespace std;
+#include "common_api.hpp"
 
 int main(int argc, char** argv)
 {
-    cout << "hello world!" << endl;
+    print_message("Hello World!");
     return 0;
 }
