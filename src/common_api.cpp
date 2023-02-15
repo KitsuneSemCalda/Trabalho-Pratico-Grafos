@@ -10,3 +10,10 @@ void print_message(std::string message){
 void break_line(){
   std::cout << std::endl;
 }
+
+int insert_to_int(){
+  int value;
+  std::cin >> value;
+  return value;
+}
+
