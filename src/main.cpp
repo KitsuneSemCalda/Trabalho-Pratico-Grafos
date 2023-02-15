@@ -9,22 +9,47 @@
 #include "enterprise.hpp"
 #include "iostream"
 
-Customer insert_customer(){
-  std::cout << "Insert new id: ";
+Vehicle insert_vehicle(){
+  print_message("Insert new id: ");
   int new_id = insert_to_int();
   break_line();
-  std::cout << "Insert demand: ";
-  int new_demand = insert_to_int();
+  print_message("Insert new capacity: ");
+  int new_capacity = insert_to_int();
   break_line();
-  std::cout << "Insert service time: ";
-  int new_service_time = insert_to_int();
+  print_message_break("Data received with sucessful");
+  return Vehicle(new_id, new_capacity);
+}
+
+Deposity insert_deposity(){
+  print_message("Insert new id: ");
+  int new_id = insert_to_int();
   break_line();
-  std::cout << "Insert arrival time lower bound: ";
+  print_message("Insert a new arrival time lower bound: ");
   int new_arrival_time_lower_bound = insert_to_int();
   break_line();
-  std::cout << "Insert arrival time upper bound: ";
+  print_message("Insert a new arrival time upper bound: ");
   int new_arrival_time_upper_bound = insert_to_int();
-  
+  break_line();
+  print_message_break("Data received with sucessful");
+
+  return Deposity(new_id, new_arrival_time_lower_bound, new_arrival_time_upper_bound);
+}
+
+Customer insert_customer(){
+  print_message("Insert new id: ");
+  int new_id = insert_to_int();
+  break_line();
+  print_message("Insert demand: ");
+  int new_demand = insert_to_int();
+  break_line();
+  print_message("Insert service time: ");
+  int new_service_time = insert_to_int();
+  break_line();
+  print_message("Insert arrival time lower bound: ");
+  int new_arrival_time_lower_bound = insert_to_int();
+  break_line();
+  print_message("Insert arrival time upper bound: ");
+  int new_arrival_time_upper_bound = insert_to_int();
   break_line();
   print_message_break("Data received with sucessful");
 
@@ -55,8 +80,10 @@ void menu(){
             insert_customer();
             break;
           case 'v':
+            insert_vehicle();
             break;
           case 'd':
+            insert_deposity();
             break;
         }
         break;
