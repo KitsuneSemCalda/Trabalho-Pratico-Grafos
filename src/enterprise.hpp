@@ -15,7 +15,7 @@ class Customer{
       this->arrival_time_upper_bound = arrival_time_upper_bound;
     };
     
-    ~Customer();
+    ~Customer(){};
 
     int get_id() const{
       return this->id;
