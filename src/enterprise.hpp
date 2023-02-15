@@ -55,6 +55,14 @@ class Vehicle{
     int id;
     int capacity;
   public:
+
+    Vehicle(int id, int capacity){
+      this->id = id;
+      this->capacity = capacity;
+    }
+
+    ~Vehicle(){}
+
     int get_id() const{
       return this->id;  
     };
@@ -76,6 +84,15 @@ class Deposity{
     int arrival_time_upper_bound;
 
   public:
+
+    Deposity(int id, int arrival_time_lower_bound, int arrival_time_upper_bound){
+      this->id = id;
+      this->arrival_time_lower_bound = arrival_time_lower_bound;
+      this->arrival_time_upper_bound = arrival_time_upper_bound;
+    }
+    
+    ~Deposity(){}
+
     int get_id() const{
         return this->id;  
     };
